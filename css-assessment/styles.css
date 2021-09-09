@@ -9,6 +9,9 @@
 ul > li > a:hover {
   cursor: pointer;
 }
+p {
+  color: var(--p-link);
+}
 
 .main {
   padding-top: 20px;
@@ -53,12 +56,13 @@ nav h1 {
 }
 .showcase {
   width: 100%;
-  /* height:500px; */
+
   display: flex;
   justify-content: center;
 }
 
-.showcase h1 {
+.showcase h1,
+.company h1 {
   font-size: 2em;
 }
 
@@ -105,7 +109,7 @@ button:hover {
   width: 40%;
   line-height: 2.5em;
   border-radius: 10px;
-  /* border: 1px solid var(--section-bg); */
+
   border: 1px solid #d2d4d6;
   padding-left: 10px;
   opacity: 0.7;
@@ -113,6 +117,48 @@ button:hover {
 .form-flex > input[type="text"]:focus {
   outline: none;
 }
+
+.company {
+  text-align: center;
+}
+.company h1 {
+  margin-top: 75px;
+}
+.company p {
+  width: 50%;
+}
+.text-center {
+  text-align: center;
+}
+
+.features {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.feature {
+  background-color: var(--section-bg);
+  width: 30%;
+  border-radius: 10px;
+  text-align: left;
+  padding-bottom: 40px;
+}
+.feature h1,
+.feature h3,
+.feature p {
+  text-align: left;
+  margin-left: 20px;
+}
+.feature h1 {
+  margin-top: 50px;
+  /* color: #3c9681; */
+  color: var(--button-background);
+}
+
+.centering {
+  margin: 0 auto;
+}
+
 @media screen and (max-width: 640px) {
   .nav-1 {
     display: none;
@@ -133,9 +179,8 @@ button:hover {
   .form-flex {
     flex-direction: column;
     justify-content: space-evenly;
-    /* align-items: space-between; */
+
     height: 100px;
-    /* height: 250px; */
   }
   .form-flex > input[type="text"] {
     width: 80%;
@@ -146,7 +191,6 @@ button:hover {
     margin-left: 5px;
     justify-content: flex-start;
     width: 100%;
-    /* align-self: center; */
   }
 
   .form-flex > .custom-button {
@@ -155,5 +199,20 @@ button:hover {
   .form-flex > input[type="text"],
   .form-flex > input[type="submit"] {
     margin-top: 0px;
+  }
+
+  .features {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 900px;
+  }
+  .feature {
+    width: 90%;
+
+    padding-bottom: 30px;
+  }
+  .feature h1 {
+    margin-top: 30px;
   }
 }
