@@ -5,14 +5,20 @@
   --button-background: #8ee5d1;
   font-family: Helvetica, sans-serif;
 }
+ul > li > a:hover {
+  cursor: pointer;
+}
 
 .main {
   padding-top: 20px;
-  margin: 0 50px;
+  margin: 0 40px;
+  /* border: 1px solid black; */
+  height: 500px;
 }
 
 nav {
-  height: 500px;
+  height: 100px;
+  /* border: 1px solid black; */
 }
 .nav-1 ul,
 .nav-2 ul {
@@ -38,14 +44,48 @@ nav h1 {
   float: left;
 }
 
-.signup {
+.custom-button {
   background-color: var(--button-background);
   border-radius: 30px;
   padding: 10px 25px;
+  border: none;
+}
+.showcase {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
+.showcase h1 {
+  font-size: 2em;
+}
+
+.s-left {
+  align-self: center;
+  flex-grow: 1;
+}
+.s-right {
+  align-self: flex-end;
+  flex-grow: 2;
+}
+button:hover {
+  cursor: pointer;
+}
+
+.showcase img {
+  min-width: 40%;
+  max-width: 60%;
+}
 @media screen and (max-width: 640px) {
   .nav-1 {
     display: none;
+  }
+  .showcase {
+    flex-direction: column;
+    text-align: center;
+  }
+  .showcase img {
+    max-width: 100%;
+    margin-top: 30px;
   }
 }
